@@ -4,34 +4,9 @@
             <v-row justify="center" align="center">
                 <v-col cols="12" md="6" justify="center" align="center">
                     <div class="formDiv">
-                        <div class="completed" v-if="visibility">
-                            <h1 class="mt-3">MOVIE:</h1><br/>
-                            <v-row>
-                                <v-col cols=12 md="6">
-                                    <h2>MOVIE NAME: </h2>
-                                    <p>{{movieName}}</p>
-                                </v-col>
-                            </v-row>
-                            <v-row>
-                                <v-col cols=12 md="6">
-                                    <h2>GENRE: </h2>
-                                    <p>{{genre}}</p>
-                                </v-col>
-                                <v-col cols=12 md="6">  
-                                    <h2>YEAR OF RELEASE: </h2>
-                                    <p>{{yearOR}}</p>
-                                </v-col>
-                            </v-row>
-                            <v-row>
-                                <v-col cols=12 md="6">
-                                    <h2>CAST: </h2>
-                                    <p>{{cast}}</p>
-                                </v-col>
-                            </v-row>
-                        </div>
-                        <h1 class="titles">SEARCH FOR A MOVIE{{formInfo}}</h1>
+                        <h1 class="titles">INPUT A MOVIE</h1>
                         <div v-for="(value, index) in formInfo" v-bind:key="index">
-                            <div>{{value.name}}{{index}}</div>
+                            <!-- <div>{{value.name}}{{index}}</div> -->
                         </div>
                         <v-form class="form" ref="form" v-model="valid" lazy-validation>
                             <v-row>
@@ -108,7 +83,8 @@ export default {
     data:function(){
         return{
             valid: true,
-            visibility:false
+            visibility:false,
+            formInfo: {}
     }
 
 },
@@ -128,9 +104,7 @@ methods:{
     reset () {
     this.$refs.form.reset()
     },
-},
-
-submitData(){
+    submitData(){
     axios
     .post('http://localhost:8087/forms', {
         formData:{
@@ -150,6 +124,9 @@ submitData(){
     })
         
   }
+},
+
+
 
 }
 </script>

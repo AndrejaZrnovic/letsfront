@@ -31,11 +31,11 @@
               <v-toolbar-title>NEW MOVIE RELEASES</v-toolbar-title>
             </v-toolbar>
               <v-list disabled>
-                <v-list-item-group v-model="value" color="primary">
+                <v-list-item-group color="primary">
                   <v-list-item
-                    v-for="(value, index) in shipInfo" v-bind:key="index">
-                      <h3 v-text="value.shipName"></h3><v-spacer></v-spacer>
-                      <h3 v-text="value.time_of_departure"></h3>
+                    v-for="(value, index) in movieInfo" v-bind:key="index">
+                      <h3 v-text="value.movieName"></h3><v-spacer></v-spacer>
+                      <h3 v-text="value.type"></h3>
                   </v-list-item>
                 </v-list-item-group>
               </v-list>
@@ -68,22 +68,17 @@ import axios from 'axios'
 
 export default {
   name: 'Home',
-   data:function(){
+   data: () => {
         return{
 
-        shipInfo:{
+        movieInfo:{
             
         },
 
-        portInfo:{
+        genreInfo:{
 
         },
 
-  
-        dateElements: {
-        hour:'numeric',
-        minute:'numeric'
-        }
      }
   },
 
