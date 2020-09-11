@@ -12,9 +12,8 @@
             </div>
           </div>
           <div class="picture" >
-            <div class="opacity"></div>
             <div class="icons">
-              <v-btn fab color="#ffb32a" class="iconBtn"><v-icon>mdi-spa-outline</v-icon></v-btn> 
+        <v-btn fab color="#ffb32a" class="iconBtn"><v-icon>mdi-spa-outline</v-icon></v-btn> 
             </div>
           </div>
           <div class="plainColor ma-0 pa-0"></div>
@@ -23,7 +22,7 @@
       <v-row class="rows">
                  <v-col>
                 <v-card
-                  max-width="400"
+                  max-width="460"
                   class="mx-auto howWeWork"
                   style="background:#ffb32a;"
                   >
@@ -140,6 +139,9 @@ export default {
   }
 .toolb {
   margin-top: 30px;
+  margin-left: 70px;
+  margin-right: 70px;
+  border-radius: 25px;
 }
 .treve {
     margin:0 auto;

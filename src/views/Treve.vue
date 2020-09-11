@@ -109,7 +109,7 @@ methods:{
     .post('http://localhost:8087/forms', {
         formData:{
             id:null,
-            movieName:this.movieName,
+            shipName:this.shipName,
             genre:this.genre,
             yearOR:this.yearOR,
             cast:this.cast,

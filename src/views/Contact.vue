@@ -10,9 +10,9 @@
                                 <v-row>
                                     <v-col cols="12" md="5">
                                         <v-text-field regular label="Name"
-                                        placeholder="First & Last name"
+                                        placeholder="First & last name"
                                         :rules="[v => !!v || 'Name is required',
-                                        v => (v && v.length <= 10) || 'Name must be less than 10 characters']"
+                                        v => (v && v.length <= 15) || 'Name must be less than 15 characters']"
                                         required
                                         v-model="name" >
                                         </v-text-field> 
@@ -46,7 +46,6 @@
                                     </v-col>
                                 </v-row>
                                 <v-row>
-
                                     <v-col cols="" md="3">
                                         <v-btn  @click="validate" :class="{ red: !valid, green: valid }" class="sendButton" rounded dark><v-icon>mdi-checkbox-marked-circle</v-icon></v-btn>
                                     </v-col>
@@ -70,8 +69,6 @@
        
     </v-container>
 </template>
-
-
 
 <script>
 import axios from "axios";
@@ -100,8 +97,6 @@ methods:{
     if(messageForm == true){
     this.submit()
     this.visibility = true;
-
-    
     }
 },
 

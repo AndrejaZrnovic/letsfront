@@ -1,7 +1,7 @@
 <template>
     <div v-if="cookieActivationQuestion" id="cookie"> 
       <div class="d-flex justify-center cookieTape pt-6">
-        <h3 class="white--text"><span>This site uses cookies. By using our website, you agree to the use of cookies.</span></h3>
+        <h3 class="white--text"><span>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. </span></h3>
         <v-btn
         class="cookiBtn ml-3"
         @click="cookieAcceptanceQuestion"
@@ -51,7 +51,7 @@ export default {
 
   #cookie {
     position:fixed;
-    top:600px;
+    top:500px;
     left:0;
     width:100%;
     z-index: 3;
@@ -59,7 +59,7 @@ export default {
 
   .cookieTape{
       background-color: #292929;
-      height:80px;
+      height:100px;
       
 
   }

@@ -12,30 +12,7 @@
       <router-link to="/treve"><span>SEARCH</span></router-link>
       <router-link to="/contact"><span>CONTACT</span></router-link>
     </nav>
-    <div class="text-center d-sm-flex d-md-none">
-      <v-menu offset-y>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            color=#000000
-            dark
-            v-bind="attrs"
-            v-on="on"
-          >
-          <v-app-bar-nav-icon></v-app-bar-nav-icon>
-          </v-btn>
-        </template>
-        <v-list>
-          <v-list-item
-            v-for="(item, index) in items"
-            :key="index"
-            router :to="item.route"
-            
-          >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </div>
+
   </v-toolbar>
 </template>
 
@@ -59,15 +36,7 @@ export default {
 
 <style scoped lang="scss">
 
-// .iconBtn{
-//   text-decoration-style: none;
-// }
-.toolbar{
-  background-color: #000000;
-  // border-width: 40px;
 
-  }
-  
   h1{
     // font-weight: lighter; 
     text-decoration: none;
@@ -87,12 +56,9 @@ export default {
   }
 
   nav a:hover {
-  // border-bottom: 1px solid white;
   color: #ffa600;
-  // background-color: rgba(143, 143, 143, 0.432);
-  // border-radius: 5%;
-}
 
+}
 
 
 </style>
